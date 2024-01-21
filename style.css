@@ -35,13 +35,14 @@ p{
   font-size: 13px;
 }
 main{
-  height: 90%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   
 }
 .container{
+  height: 90%;
   background: var(--sec-color-white);
   box-shadow: 5px 4px 4px rgb(0, 0, 0, .1);
   display: flex;
@@ -54,7 +55,7 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
   padding: 30px 50px;
   border-radius: 20px;
 }
@@ -62,9 +63,9 @@ main{
   color: var(--transparent-color);
 }
 .result-percent {
-  background: var(--circle-color);
-  width: 150px;
-  height: 150px;
+  background: linear-gradient(to bottom,  #4e21ca,#2421ca, transparent);
+  width: 135px;
+  height: 135px;
   border-radius: 50%;
   border: none;
   display: flex;
@@ -75,21 +76,22 @@ main{
 }
 .result-percent  h1{
   color: var(--sec-color-white);
+  font-size: 50px;
   font-weight: 800;
   text-align: center;
 }
 .result-percent p{
-  font-size: 10px;
+  font-size: 14px;
 }
 .result-text{
   text-align: center;
 }
-.result-text h3{
+.result-text h2{
   color: var(--sec-color-white);
   margin-bottom: 10px;
 }
 .result-text p{
-
+  font-size: 15px;
   font-weight: 500;
   color: var(--transparent-color);
 }
@@ -117,8 +119,9 @@ main{
   padding: 12px 9px;
   border-radius: 5px;
 }
-.list h5{
+.list h4{
   flex: 1; 
+  font-weight: 700;
 }
 
 .red{
@@ -138,6 +141,7 @@ main{
   color: #1125d4;
 }
 .list p{
+  font-size: 15px;
   font-weight: 800;
   color: rgb(0, 0, 0, .4);
 }
@@ -148,13 +152,52 @@ main{
 .button{
   text-align: center;
   font-weight: 700;
-  background: var(--sec-color-mixedblues);
+  background: var(--button-color);
   padding: 11px;
-  margin-top: 12px;
+  margin-top: 5px;
   border-radius: 20px;
   color: var(--bg-color);
 }
 
 .attribution{
   text-align: center;
+}
+
+
+@media (max-width: 375px){
+  .container{
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    border-radius: none;
+  }
+  .result{
+    width: 100%;
+    height: 45%;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .summary{
+    width: 100%;
+  }
+  .summary-points{
+    gap: 15px;
+  }
+  .list{
+    width: 95%;
+    padding: 18px 15px;
+    border-radius: 10px;
+    display: flex;
+  }
+  .button{
+    width: 95%;
+    padding: 16px 0;
+    border-radius: 50px;
+  }
+  .button p{
+    font-size: 18px;
+  }
+  .attribution{
+    display: none;
+  }
 }
